@@ -1,0 +1,173 @@
+form {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+
+
+form input {
+  margin: 5px;
+}
+
+form button {
+  margin-top: 10px;
+  margin-right: 10px;
+
+}
+
+.listBar{
+  background-color: #328bff;
+  height: 20px;
+  transition: width 0.6s ease, height 0.6s ease;
+  .Buttons{
+    opacity: 0;
+    transition: opacity 0.5s ease 0s;
+  }
+}
+
+.listBar:hover{
+  height: 100px;
+  transition: width 0.6s ease, height 0.6s ease;
+  background-color: #328bff;
+  .Buttons{
+    opacity: 1;
+    transition: opacity 0.5s ease 0s;
+  }
+}
+
+
+.Buttons{
+  position: absolute;
+  margin-top: 30px;
+  color: #000000;
+  padding-left: 625px;
+}
+
+
+#gym-button{
+  position: absolute;
+  border-width: 0px;
+  height:25px;
+  width: 142px;
+  transition: height 0.6s ease
+}
+
+#gym-button:hover{
+  background-color: #9bc6ff;
+  height: 40px;
+  transition: height 0.6s ease;
+}
+
+#regi-button{
+  position: absolute;
+  margin-left: 142px;
+  height:25px;
+  border-width: 0px;
+  transition: height 0.6s ease;
+}
+
+#regi-button:hover{
+  background-color: #9bc6ff;
+  height: 40px;
+  transition: height 0.6s ease;
+}
+
+#train-button{
+  height:25px;
+  position: absolute;
+  margin-left: 246.5px;
+  border-width: 0px;
+  transition: height 0.6s ease;
+}
+
+#train-button:hover{
+  background-color: #9bc6ff;
+  height: 40px;
+  transition: height 0.6s ease;
+}
+
+#workL-button{
+  position: absolute;
+  height:25px;
+  margin-left: 313px;
+  border-width: 0px;
+  transition: height 0.6s ease;
+}
+
+#workL-button:hover{
+  background-color: #9bc6ff;
+  height: 40px;
+  transition: height 0.6s ease;
+}
+
+#workts-button{
+  position: absolute;
+  height:25px;
+  margin-left: 402px;
+  border-width: 0px;
+  transition: height 0.6s ease;
+}
+
+#workts-button:hover{
+  background-color: #9bc6ff;
+  height: 40px;
+  transition: height 0.6s ease;
+}
+
+#exerc-button{
+  position: absolute;
+  height:25px;
+  margin-left: 480px;
+  border-width: 0px;
+  transition: height 0.6s ease;
+}
+
+#exerc-button:hover{
+  background-color: #9bc6ff;
+  height: 40px;
+  transition: height 0.6s ease;
+}
+
+#exerType-button{
+  height:25px;
+  position: absolute;
+  margin-left: 555px;
+  border-width: 0px;
+  transition: height 0.6s ease;
+}
+
+#exerType-button:hover{
+  background-color: #9bc6ff;
+  height: 40px;
+  transition: height 0.6s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+  width: 47%;
+  margin: 20px auto;
+  background-color: #bbd5ff;
+
+}
+
+.navbar button{
+ padding: 10px;
+ margin: 8.5px;
+}
+
+
