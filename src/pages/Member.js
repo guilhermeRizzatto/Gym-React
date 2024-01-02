@@ -49,7 +49,7 @@ function Member(){
         .then(objs => objs.json())
         .then(objs_converted => {
             setMembers([...members, objs_converted]);
-            alert("sucessful registration");
+            alert("Successful registration");
             cleanForms();
         })
     }
@@ -68,7 +68,7 @@ function Member(){
         .then(objs_converted => {
             
             //mensage
-            alert(objs_converted.mensagem);
+            alert("Successful Deleted");
 
             // Copy products array
             let arrayTemp = [...members];
