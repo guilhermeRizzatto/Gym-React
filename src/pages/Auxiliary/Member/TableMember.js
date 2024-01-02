@@ -1,4 +1,4 @@
-function Table({vetor}){
+function Table({vetor, select}){
     return(
         <table className="table">
             <thead>
@@ -23,7 +23,7 @@ function Table({vetor}){
                         <td>{obj.age}</td>
                         <td>{obj.weight}</td>
                         <td>{obj.height}</td>
-                        <td><button className="btn btn-primary rounded-0">Select</button></td>
+                        <td><button onClick={() => {select(index)}} className="btn btn-primary rounded-0">Select</button></td>
                     </tr>
                     ))
                }

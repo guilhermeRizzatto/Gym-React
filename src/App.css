@@ -1,6 +1,6 @@
 form {
   width: 500px;
-  margin: 30px auto;
+  margin: 70px auto;
   text-align: center;
 }
 
@@ -17,29 +17,31 @@ form button {
 }
 
 .listBar{
+  text-align: center;
   background-color: #328bff;
-  height: 20px;
+  height: 25px;
   transition: width 0.6s ease, height 0.6s ease;
   .Buttons{
     opacity: 0;
-    transition: opacity 0.5s ease 0s;
+    transition: opacity 0.3s ease 0s;
   }
 }
 
+
 .listBar:hover{
-  height: 100px;
+  height: 100px; 
   transition: width 0.6s ease, height 0.6s ease;
   background-color: #328bff;
   .Buttons{
     opacity: 1;
-    transition: opacity 0.5s ease 0s;
+    transition: opacity 0.7s ease 0s;
   }
 }
 
 
 .Buttons{
   position: absolute;
-  margin-top: 30px;
+  margin-top: 20px;
   color: #000000;
   padding-left: 625px;
 }
@@ -144,7 +146,23 @@ form button {
 }
 
 
+#age{
+  width: 100px;
+}
 
+#weight{
+  position: absolute;
+  margin-top: -43px;
+  width: 130px;
+  margin-left: 180px;
+}
+
+#height{
+  position: absolute;
+  margin-top: -43px;
+  width: 130px;
+  margin-left: 375px;
+}
 
 
 

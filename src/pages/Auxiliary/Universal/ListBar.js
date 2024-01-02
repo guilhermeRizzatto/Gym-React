@@ -1,10 +1,11 @@
 function ListBar(){
     return(
 
-        <div class="listBar">
-            <ul class="Buttons">
-                <button id="gym-button" type="button">Gym Memberships</button>
-                <button id="regi-button">Registrations</button>
+        <div className="listBar">
+            <span id="SpanMenu">Menu</span>
+            <ul className="Buttons">
+                <a href='http://localhost:3000/member'><button id="gym-button" type="button">Gym Memberships</button></a>
+                <a href='http://localhost:3000/registrations'><button id="regi-button">Registrations</button></a>
                 <button id="train-button">Trainers</button>
                 <button id="workL-button">WorkLoads</button>
                 <button id="workts-button">Workouts</button>
