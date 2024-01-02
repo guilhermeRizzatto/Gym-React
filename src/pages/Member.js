@@ -89,6 +89,42 @@ function Member(){
         })
     }
 
+    // UpdateMember
+    const UpdateMember = () => {
+        fetch("http://localhost:8080/gymMembers/patch/" + objMember.id,{
+            method:'PATCH',
+            body:JSON.stringify(objMember),
+            headers:{
+                'Content-type':'application/json',
+                'Accept':'application/json'
+            }
+        }) 
+        .then(objs => objs.json())
+        .then(objs_converted => {
+
+            alert("Successful updated");
+            
+            // Copy products array
+            let arrayTemp = [...members];
+
+            // Index
+            let index = arrayTemp.findIndex((p) => {
+                return p.id === objMember.id;
+            });
+
+            // Change product of arrayTemp
+            arrayTemp[index] = objMember;
+
+            // Refresh array Members
+            setMembers(arrayTemp);
+
+
+            cleanForms();
+        })
+    }
+
+
+
     // Clean Forms
     const cleanForms = () => {
         setObjMember(member);
@@ -110,7 +146,7 @@ function Member(){
     return(
         <div>
         <ListBar />
-        <Forms  button={btnPost} keyboard={typing} post={post} obj = {objMember} input={inputCPF} cancel={cleanForms} remove={deleteMember}/>
+        <Forms  button={btnPost} keyboard={typing} post={post} obj = {objMember} input={inputCPF} cancel={cleanForms} remove={deleteMember} update={UpdateMember} />
         <Table array={members} select={select}/>
         </div>
     )

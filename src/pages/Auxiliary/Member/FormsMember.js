@@ -1,4 +1,4 @@
-function Forms({button, keyboard, post, obj, input, cancel, remove}) {
+function Forms({button, keyboard, post, obj, input, cancel, remove, update}) {
     return (
         <form>
             {
@@ -27,7 +27,7 @@ function Forms({button, keyboard, post, obj, input, cancel, remove}) {
                 <button type="button" onClick={post} className="btn btn-success rounded-0">Post</button>
                 :
                 <div class="d-grid gap-2 d-md-block">
-                    <button id="updateButton" type="button" className="btn btn-warning rounded-0">Update</button>
+                    <button id="updateButton" onClick={update} type="button" className="btn btn-warning rounded-0">Update</button>
                     <button type="button" onClick={remove} className="btn btn-danger rounded-0">Delete</button>
                     <button type="button" onClick={cancel} className="btn btn-outline-secondary rounded-0">Cancel</button>
                 </div>
