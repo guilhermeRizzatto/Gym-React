@@ -39,7 +39,7 @@ function Member(){
     // PostMember
     const post = () => {
         fetch("http://localhost:8080/gymMembers",{
-            method:'post',
+            method:'POST',
             body:JSON.stringify(objMember),
             headers:{
                 'Content-type':'application/json',
@@ -51,6 +51,41 @@ function Member(){
             setMembers([...members, objs_converted]);
             alert("sucessful registration");
             cleanForms();
+        })
+    }
+
+    // DeleteMember
+    const deleteMember = () => {
+        fetch("http://localhost:8080/gymMembers/delete" + objMember.id,{
+            method:'DELETE',
+            headers:{
+                'Content-type':'application/json',
+                'Accept':'application/json',
+                'Access-Control-Allow-Origin': '*'
+            }
+        }) 
+        .then(objs => objs.json())
+        .then(objs_converted => {
+            
+            //mensage
+            alert(objs_converted.mensagem);
+
+            // Copy products array
+            let arrayTemp = [...members];
+
+            // Index
+            let index = arrayTemp.findIndex((p) => {
+                return p.id === objMember.id;
+            });
+
+            // Remove product of arrayTemp
+            arrayTemp.splice(index, 1);
+
+            // Refresh array Members
+            setMembers(arrayTemp);
+
+            cleanForms();
+
         })
     }
 
@@ -75,8 +110,8 @@ function Member(){
     return(
         <div>
         <ListBar />
-        <Forms  button={btnPost} keyboard={typing} post={post} obj = {objMember} input={inputCPF} cancel={cleanForms}/>
-        <Table vetor={members} select={select}/>
+        <Forms  button={btnPost} keyboard={typing} post={post} obj = {objMember} input={inputCPF} cancel={cleanForms} remove={deleteMember}/>
+        <Table array={members} select={select}/>
         </div>
     )
 }

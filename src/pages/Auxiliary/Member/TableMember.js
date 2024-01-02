@@ -1,4 +1,4 @@
-function Table({vetor, select}){
+function Table({array, select}){
     return(
         <table className="table">
             <thead>
@@ -15,7 +15,7 @@ function Table({vetor, select}){
 
             <tbody>
                {
-                    vetor.map((obj, index) => (
+                    array.map((obj, index) => (
                     <tr key={index}>
                         <td>{obj.id}</td>
                         <td>{obj.name}</td>

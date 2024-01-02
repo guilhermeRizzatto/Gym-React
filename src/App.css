@@ -46,6 +46,10 @@ form button {
   padding-left: 625px;
 }
 
+#updateButton:hover{
+  background-color: #e2ad0f;
+  border-color: #e2ad0f;
+}
 
 #gym-button{
   position: absolute;
