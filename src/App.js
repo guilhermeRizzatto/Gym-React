@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate }
     from 'react-router-dom';
 import Member from './pages/Member/Member';
 import Registration from './pages/Registration/Registration';
+import Trainer from './pages/Trainer/Trainer';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Navigate to="/member" />} />    
         <Route path='/member' element={<Member />} />    
         <Route path='/registrations' element={<Registration />} />
+        <Route path='/trainers' element={<Trainer />} />
       </Routes>
     </Router>
     </div>

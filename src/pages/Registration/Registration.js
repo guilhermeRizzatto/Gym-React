@@ -46,7 +46,7 @@ function Registration(){
     }
 
 
-    // PostRegistration
+    // Post Registration
     const post = () => {
         fetch("http://localhost:8080/registrations",{
             method:'POST',
@@ -64,7 +64,7 @@ function Registration(){
         })
     }
 
-    // UpdateRegistration
+    // Update Registration
     const UpdateRegistration = () => {
         fetch("http://localhost:8080/registrations/patch/" + objRegistration.id,{
             method:'PATCH',
@@ -90,7 +90,7 @@ function Registration(){
             // Change product of arrayTemp
             arrayTemp[index] = objRegistration;
 
-            // Refresh array Members
+            // Refresh array Registrations
             setRegistrations(arrayTemp);
 
 
@@ -107,7 +107,7 @@ function Registration(){
         setGymMemberId(true);
     }
 
-    // Select member
+    // Select registration
     const select = (index) => {
         setObjRegistration(registrations[index]);
         setBtnPost(false);

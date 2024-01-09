@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 function ListBar(){
     return(
 
@@ -8,7 +9,7 @@ function ListBar(){
             <ul className="Buttons">
                 <Link to='http://localhost:3000/member'><button id="gym-button" type="button">Gym Memberships</button></Link>
                 <Link to='http://localhost:3000/registrations'><button id="regi-button">Registrations</button></Link>
-                <button id="train-button">Trainers</button>
+                <Link to='http://localhost:3000/trainers'><button id="train-button">Trainers</button></Link>
                 <button id="workL-button">WorkLoads</button>
                 <button id="workts-button">Workouts</button>
                 <button id="exerc-button">Exercises</button>
