@@ -1,6 +1,6 @@
 function Forms({button, keyboard, post, obj, input, cancel, remove, update}) {
     return (
-        <form>
+        <form> 
             {
                 input
                 ?
@@ -10,7 +10,7 @@ function Forms({button, keyboard, post, obj, input, cancel, remove, update}) {
                     <input type="text" value={obj.phone} onChange={keyboard} name="phone" placeholder="Phone" className="form-control rounded-0" id="phone" />
                     <input type="text" value={obj.age} onChange={keyboard} name="age" placeholder="Age" className="form-control rounded-0" id="age" />
                     <input type="text" value={obj.weight} onChange={keyboard} name="weight" placeholder="Weight      (kg)" className="form-control rounded-0" id="weight" />
-                    <input type="text" value={obj.height} onChange={keyboard} name="height" placeholder="Height      (cm)" className="form-control rounded-0" id="height" />
+                    <input type="text" value={obj.height} onChange={keyboard} name="height" placeholder="Height     (cm)" className="form-control rounded-0" id="height" />
                 </div>
                 :
                 <div>
@@ -18,7 +18,7 @@ function Forms({button, keyboard, post, obj, input, cancel, remove, update}) {
                     <input type="text" value={obj.phone} onChange={keyboard} name="phone" placeholder="Phone" className="form-control rounded-0" id="phone" />
                     <input type="text" value={obj.age} onChange={keyboard} name="age" placeholder="Age" className="form-control rounded-0" id="age" />
                     <input type="text" value={obj.weight} onChange={keyboard} name="weight" placeholder="Weight      (kg)" className="form-control rounded-0" id="weight" />
-                    <input type="text" value={obj.height} onChange={keyboard} name="height" placeholder="Height      (cm)" className="form-control rounded-0" id="height" />
+                    <input type="text" value={obj.height} onChange={keyboard} name="height" placeholder="Height     (cm)" className="form-control rounded-0" id="height" />
                 </div>
             }     
             {

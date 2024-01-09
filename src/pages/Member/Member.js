@@ -1,8 +1,9 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import Table from './Auxiliary/Member/TableMember';
-import Forms from './Auxiliary/Member/FormsMember';
-import ListBar from './Auxiliary/Universal/ListBar';
+import Table from './TableMember';
+import Forms from './FormsMember';
+import ListBar from '../Universal/ListBar';
+import RefreshButton from "../Universal/RefreshButton";
 
 function Member(){
 
@@ -148,6 +149,7 @@ function Member(){
         <ListBar />
         <Forms  button={btnPost} keyboard={typing} post={post} obj = {objMember} input={inputCPF} cancel={cleanForms} remove={deleteMember} update={UpdateMember} />
         <Table array={members} select={select}/>
+        <RefreshButton />
         </div>
     )
 }

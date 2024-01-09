@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 function ListBar(){
     return(
 
         <div className="listBar">
             <span id="SpanMenu">Menu</span>
             <ul className="Buttons">
-                <a href='http://localhost:3000/member'><button id="gym-button" type="button">Gym Memberships</button></a>
-                <a href='http://localhost:3000/registrations'><button id="regi-button">Registrations</button></a>
+                <Link to='http://localhost:3000/member'><button id="gym-button" type="button">Gym Memberships</button></Link>
+                <Link to='http://localhost:3000/registrations'><button id="regi-button">Registrations</button></Link>
                 <button id="train-button">Trainers</button>
                 <button id="workL-button">WorkLoads</button>
                 <button id="workts-button">Workouts</button>

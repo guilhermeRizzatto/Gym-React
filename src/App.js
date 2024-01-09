@@ -1,9 +1,11 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route }
+import './pages/Member/Member.css';
+import './pages/Universal/ListBar.css';
+import './pages/Universal/RefreshButton.css';
+import { BrowserRouter as Router, Routes, Route, Navigate }
     from 'react-router-dom';
-import Member from './pages/Member';
-import Home from './pages/Home';
-import Registration from './pages/Registration';
+import Member from './pages/Member/Member';
+import Registration from './pages/Registration/Registration';
 
 function App() {
 
@@ -11,7 +13,7 @@ function App() {
     <div>
       <Router>
       <Routes>
-        <Route path='/' element={<Home />} />    
+        <Route path='/' element={<Navigate to="/member" />} />    
         <Route path='/member' element={<Member />} />    
         <Route path='/registrations' element={<Registration />} />
       </Routes>
