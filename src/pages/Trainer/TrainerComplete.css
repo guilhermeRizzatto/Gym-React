@@ -1,0 +1,269 @@
+.divAllItens {
+    justify-content: space-between;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0);
+    width: auto;
+    min-width: 450px;
+}
+
+.trainerWorkLoadDaysDiv {
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: rgba(0, 0, 255, 0);
+    width: auto;
+    margin-right: 10px;
+    height: auto;
+    max-height: 344px
+}
+
+.trainerDiv {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    min-width: 250px;
+
+    #TrainerNameTitle {
+        height: 30px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+        width: 80px;
+        margin-top: 10px;
+        border-style: solid;
+        border-color: rgba(163, 163, 163, 0.596);
+        border-width: 2px;
+        border-radius: 0px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #TrainerName {
+        margin-right: 10px;
+        margin-left: 10px;
+        width: auto;
+        max-width: 380px;
+        margin-top: 0px;
+        background-color: rgb(222, 222, 222);
+    }
+
+    #TrainerEmailTitle {
+        margin-left: 10px;
+        width: 80px;
+        justify-self: left;
+        border-style: solid;
+        border-color: rgba(163, 163, 163, 0.596);
+        border-width: 2px;
+        border-radius: 0px;
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 0px;
+    }
+
+    #TrainerEmail {
+        margin-right: 10px;
+        margin-left: 10px;
+        width: auto;
+        max-width: 380px;
+        justify-self: center;
+        background-color: rgb(222, 222, 222);
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+}
+
+.workLoadDaysDiv {
+    height: auto;
+    justify-content: space-between;
+    max-width: 400px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 0px;
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    min-width: 250px;
+
+    .workLoadDiv {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+
+        #TrainerWorkLoad {
+            padding-top: 1px;
+            height: 30px;
+            background-color: rgb(255, 255, 255);
+            width: 180px;
+            margin-top: 10px;
+            border-style: solid;
+            border-color: rgba(163, 163, 163, 0.596);
+            border-width: 2px;
+            border-radius: 0px;
+            margin-bottom: 0px;
+        }
+
+        #TrainerEntryTime {
+            text-align: center;
+            width: 180px;
+            padding-top: 10px;
+            padding-left: 10px;
+            background-color: rgb(222, 222, 222);
+            height: 45px;
+        }
+
+        #TrainerDepartureTime {
+            width: 180px;
+            margin-top: -16px;
+            padding-top: 10px;
+            background-color: rgb(222, 222, 222);
+            text-align: center;
+            min-width: 150px;
+            height: 45px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .daysDiv {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        margin-left: 10px;
+
+        #TrainerDaysTitle {
+            width: 150px;
+            min-width: 150px;
+            padding-top: 1px;
+            height: 30px;
+            background-color: rgb(255, 255, 255);
+            margin-top: 10px;
+            border-style: solid;
+            border-color: rgba(163, 163, 163, 0.596);
+            border-width: 2px;
+            border-radius: 0px;
+            margin-bottom: 0px;
+        }
+
+
+        #TrainerDays {
+            min-height: 90px;
+            width: 150px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 8px;
+            padding-right: 8px;
+            background-color: rgb(222, 222, 222);
+            height: auto;
+            word-wrap: normal;
+        }
+    }
+}
+
+.workoutGymMemberDiv {
+    width: 1200px;
+    min-width: 430px;
+    background-color: rgba(185, 212, 234, 0);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .workoutDiv {
+        width: auto;
+        height: auto;
+        max-width: 1200px;
+        min-width: 400px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 10px;
+        background-color: rgb(243, 243, 243);
+
+        #TrainerWorkout {
+            background-color: rgb(211, 235, 255);
+        }
+
+        #TrainerDescriptionTitle {
+            border-color: rgb(119, 119, 119);
+            border-style: solid;
+            margin-bottom: 0px;
+            margin-right: 10px;
+            margin-left: 10px;
+            background-color: rgb(237, 237, 237);
+            height: 30px;
+        }
+
+        #TrainerDescription {
+            width: auto;
+            margin-top: 0px;
+            margin-right: 10px;
+            margin-left: 10px;
+            background-color: rgb(237, 237, 237);
+            word-wrap: normal;
+            border-top: 0px;
+            border-color: rgb(200, 200, 200);
+            border-style: solid;
+        }
+
+    }
+    .sssMemberDiv {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color:rgb(243, 243, 243);
+        #TrainerWorkoutMember {
+            height: 30px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+            border-color: rgb(119, 119, 119);
+            border-style: solid;
+            background-color: rgb(255, 213, 213);
+        }
+
+        #TrainerWorkoutMemberPhone,
+        #TrainerWorkoutMemberAge,
+        #TrainerWorkoutMemberWeight,
+        #TrainerWorkoutMemberName {
+            word-wrap: normal;
+            border-top: 0px;
+            border-left: 1px;
+            border-right: 1px;
+            border-bottom: 1px;
+            border-color: rgb(200, 200, 200);
+            border-style: solid;
+            height: auto;
+            min-height: 30px;
+            margin-top: 0px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+            background-color: rgb(237, 237, 237);
+        }
+
+        #TrainerWorkoutMemberHeight{
+            word-wrap: break-word;
+            border-top: 0px;
+            border-left: 1px;
+            border-right: 1px;
+            border-bottom: 1px;
+            border-color: rgb(200, 200, 200);
+            border-style: solid;
+            height: auto;
+            min-height: 30px;
+            margin-top: 0px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            background-color: rgb(237, 237, 237);
+        }
+        
+    }
+}

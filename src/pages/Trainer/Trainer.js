@@ -1,9 +1,12 @@
-import ListBar from "../Universal/ListBar";
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import ListBar from "../Universal/ListBar";
 import RefreshButton from "../Universal/RefreshButton";
 import Table from "../Trainer/TableTrainer";
 import Forms from "../Trainer/FormsTrainer";
+
 
 
 function Trainer(){
@@ -139,6 +142,7 @@ function Trainer(){
     return (
     <div>
         <ListBar />
+        <Link to='http://localhost:3000/trainersComplete'><button>Trainers Complete</button></Link>
         <Forms button={btnPost} keyboard={typing} post={post} obj = {objTrainer} cancel={cleanForms} remove={deleteTrainer} update={updateTrainer} />
         <Table array={trainers} select={select}/>
         <RefreshButton />
