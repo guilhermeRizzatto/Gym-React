@@ -1,4 +1,4 @@
-.divAllItens {
+.divTableTrainerComplete {
     justify-content: space-between;
     margin-top: 10px;
     display: flex;
@@ -13,7 +13,7 @@
 .trainerWorkLoadDaysDiv {
     margin-top: 10px;
     margin-left: 30px;
-    background-color: rgba(0, 0, 255, 0);
+    background-color: rgba(0, 255, 255, 0);
     width: auto;
     margin-right: 10px;
     height: auto;
@@ -30,25 +30,12 @@
     max-width: 400px;
     min-width: 250px;
 
-    #TrainerNameTitle {
-        height: 30px;
-        margin-left: 10px;
-        margin-bottom: 0px;
-        width: 80px;
-        margin-top: 10px;
-        border-style: solid;
-        border-color: rgba(163, 163, 163, 0.596);
-        border-width: 2px;
-        border-radius: 0px;
-        background-color: rgb(255, 255, 255);
-    }
-
     #TrainerName {
         margin-right: 10px;
         margin-left: 10px;
         width: auto;
         max-width: 380px;
-        margin-top: 0px;
+        margin-top: 10px;
         background-color: rgb(222, 222, 222);
     }
 
@@ -163,107 +150,164 @@
 }
 
 .workoutGymMemberDiv {
-    width: 1200px;
+    width: 1000px;
     min-width: 430px;
     background-color: rgba(185, 212, 234, 0);
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-right: 100px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+}
 
-    .workoutDiv {
+.WorkoutListDiv{
+    width: 990px;
+    display: flex;
+    #ButtonShowListWorkouts{
+        background-color: rgb(221, 238, 253);
+        border-style: solid;
+        border-color: rgba(0, 255, 255, 0);
+    }
+}
+
+.workoutDiv {
+    flex-direction: column;
+    display: flex;
+    width: auto;
+    height: auto;
+    max-width: 1200px;
+    min-width: 400px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 10px;
+    background-color: rgb(243, 243, 243);
+
+    #TrainerWorkout {
+        background-color: rgb(211, 235, 255);
+        margin-bottom: 0px;
+    }
+
+    #TrainerWorkoutId {
+        font-weight: 600;
+        align-self: center;
+        width: 100px;
+        margin-top: 0px;
+        background-color: rgb(211, 235, 255);
+    }
+
+    #TrainerDescriptionTitle {
+        font-weight: 600;
+        border-color: rgba(119, 119, 119, 0);
+        border-style: solid;
+        margin-bottom: 0px;
+        margin-right: 10px;
+        margin-left: 10px;
+        background-color: rgb(235, 235, 235);
+        height: 30px;
+    }
+
+    #TrainerDescription {
         width: auto;
+        margin-top: 0px;
+        margin-right: 10px;
+        margin-left: 10px;
+        background-color: rgb(235, 235, 235);
+        word-wrap: normal;
+        border-top: 0px;
+        border-color: rgba(200, 200, 200, 0);
+        border-style: solid;
+    }
+
+}
+
+.memberDiv {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(243, 243, 243);
+
+    #TrainerWorkoutMember {
+        font-weight: 600;
+        height: 30px;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 0px;
+        border-color: rgb(253, 144, 144);
+        border-style: solid;
+        background-color: rgb(255, 213, 213);
+    }
+
+    #TrainerWorkoutMemberPhone,
+    #TrainerWorkoutMemberAge,
+    #TrainerWorkoutMemberWeight,
+    #TrainerWorkoutMemberId,
+    #TrainerWorkoutMemberName {
+        word-wrap: normal;
+        border-top: 0px;
+        border-left: 1px;
+        border-right: 1px;
+        border-bottom: 1px;
+        border-color: rgb(200, 200, 200);
+        border-style: solid;
         height: auto;
-        max-width: 1200px;
-        min-width: 400px;
+        min-height: 30px;
         margin-top: 0px;
-        margin-left: 0px;
         margin-right: 10px;
-        background-color: rgb(243, 243, 243);
-
-        #TrainerWorkout {
-            background-color: rgb(211, 235, 255);
-        }
-
-        #TrainerDescriptionTitle {
-            border-color: rgb(119, 119, 119);
-            border-style: solid;
-            margin-bottom: 0px;
-            margin-right: 10px;
-            margin-left: 10px;
-            background-color: rgb(237, 237, 237);
-            height: 30px;
-        }
-
-        #TrainerDescription {
-            width: auto;
-            margin-top: 0px;
-            margin-right: 10px;
-            margin-left: 10px;
-            background-color: rgb(237, 237, 237);
-            word-wrap: normal;
-            border-top: 0px;
-            border-color: rgb(200, 200, 200);
-            border-style: solid;
-        }
-
+        margin-left: 10px;
+        margin-bottom: 0px;
+        background-color: rgb(237, 237, 237);
     }
-    .sssMemberDiv {
+
+    #TrainerWorkoutMemberHeight {
+        word-wrap: break-word;
+        border-top: 0px;
+        border-left: 1px;
+        border-right: 1px;
+        border-bottom: 1px;
+        border-color: rgb(200, 200, 200);
+        border-style: solid;
+        height: auto;
+        min-height: 30px;
         margin-top: 0px;
-        margin-left: 0px;
         margin-right: 10px;
-        margin-bottom: 10px;
-        background-color:rgb(243, 243, 243);
-        #TrainerWorkoutMember {
-            height: 30px;
-            margin-top: 10px;
-            margin-right: 10px;
-            margin-left: 10px;
-            margin-bottom: 0px;
-            border-color: rgb(119, 119, 119);
-            border-style: solid;
-            background-color: rgb(255, 213, 213);
-        }
-
-        #TrainerWorkoutMemberPhone,
-        #TrainerWorkoutMemberAge,
-        #TrainerWorkoutMemberWeight,
-        #TrainerWorkoutMemberName {
-            word-wrap: normal;
-            border-top: 0px;
-            border-left: 1px;
-            border-right: 1px;
-            border-bottom: 1px;
-            border-color: rgb(200, 200, 200);
-            border-style: solid;
-            height: auto;
-            min-height: 30px;
-            margin-top: 0px;
-            margin-right: 10px;
-            margin-left: 10px;
-            margin-bottom: 0px;
-            background-color: rgb(237, 237, 237);
-        }
-
-        #TrainerWorkoutMemberHeight{
-            word-wrap: break-word;
-            border-top: 0px;
-            border-left: 1px;
-            border-right: 1px;
-            border-bottom: 1px;
-            border-color: rgb(200, 200, 200);
-            border-style: solid;
-            height: auto;
-            min-height: 30px;
-            margin-top: 0px;
-            margin-right: 10px;
-            margin-left: 10px;
-            margin-bottom: 20px;
-            background-color: rgb(237, 237, 237);
-        }
-        
+        margin-left: 10px;
+        margin-bottom: 20px;
+        background-color: rgb(237, 237, 237);
     }
+
+}
+
+.listWorkouts {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(181, 212, 239);
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 140px;
+    text-align: start;
+
+    #listWorkoutsTrainer {
+        word-wrap: normal;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 10px;
+        list-style-type: none;
+        background-color: rgba(255, 255, 255, 0);
+
+        #buttonsWorkoutsTrainer {
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+        }
+
+        #buttonsWorkoutsTrainer:hover {
+            font-weight: 500;
+        }
+    }
+
+    
 }

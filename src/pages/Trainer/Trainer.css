@@ -1,0 +1,16 @@
+#TrainerCompleteButton{
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: rgb(83, 180, 254);
+    border-style: solid;
+    border-color: rgb(83, 180, 254);
+    transition: all 0.2s ease-in;
+
+}
+
+
+#TrainerCompleteButton:hover{
+    transition: all 0.2s ease-in;
+    background-color: rgb(150, 210, 255);
+    border-color: rgb(0, 140, 255);
+}

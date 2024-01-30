@@ -1,0 +1,72 @@
+.listTrainerComplete{
+    margin-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    background-color: rgba(0, 136, 255, 0);
+    width: fit-content;
+}
+
+.inputListTrainerComplete{
+    #input{
+        width: 140px;
+        padding-left: 10px;
+        outline: none;
+        border-style: solid;
+        border-width: 2px;
+    }
+    #input:focus{
+        outline: none;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(41, 99, 224);
+    }
+    #buttonSelect{
+        margin-left: 0px;
+        width: 70px;
+        margin-right: 5px;
+        background-color: rgba(41, 99, 224, 0);
+        border-style: solid;
+    }
+    #buttonSelect:hover{
+        margin-right: 5px;
+        border-color: rgb(41, 99, 224);
+        border-style: solid;
+        color: rgb(41, 99, 224);;
+    }
+}
+
+#buttonShow{
+    border-style: solid;
+    background-color: rgba(41, 99, 224, 0);
+    margin-left: 5px;
+}
+
+#buttonShow:hover{
+    background-color: rgba(41, 99, 224, 0);
+    color: rgb(41, 99, 224);
+}
+
+
+.listTrainers{
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    max-height: 150px;
+    margin-bottom: 0px;
+    #list{
+        word-wrap: normal;
+        width: 220px;
+        margin-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        list-style-type: none;
+        background-color: rgba(173, 213, 255, 0.565);
+        margin-left: 5px;
+        #buttons{
+            background-color: rgba(145, 242, 0, 0);
+            border-style: none;
+        }
+        #buttons:hover{
+            font-weight: 500;
+        }
+    }
+}
