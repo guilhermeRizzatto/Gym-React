@@ -5,123 +5,107 @@ import Forms from './FormsMember';
 import ListBar from '../Universal/ListBar';
 import RefreshButton from "../Universal/RefreshButton";
 
-function Member(){
+function Member() {
 
     // Object Member
     const member = {
-        id : 0,
-        name : "",
-        cpf : "",
-        phone : "",
-        age : "",
-        weight : "",
-        height : ""
+        id: 0,
+        name: "",
+        cpf: "",
+        phone: "",
+        age: "",
+        weight: "",
+        height: ""
     }
 
     //UseState
-    const[members, setMembers] = useState([]);
+    const [members, setMembers] = useState([]);
     const [objMember, setObjMember] = useState(member);
-    const[btnPost, setBtnPost] = useState(true);
-    const[inputCPF, setInputCPF] = useState(true);
+    const [btnPost, setBtnPost] = useState(true);
+    const [inputCPF, setInputCPF] = useState(true);
 
     //UseEffect
-    useEffect(() =>{
+    useEffect(() => {
         fetch("http://localhost:8080/gymMembers")
-        .then(objs => objs.json())
-        .then(objs_converted => setMembers(objs_converted));
+            .then(objs => objs.json())
+            .then(objs_converted => setMembers(objs_converted));
     }, []);
 
     // Get Forms data
     const typing = (e) => {
-        setObjMember({...objMember,[e.target.name]:e.target.value});
+        setObjMember({ ...objMember, [e.target.name]: e.target.value });
     }
 
 
     // PostMember
     const post = () => {
-        fetch("http://localhost:8080/gymMembers",{
-            method:'POST',
-            body:JSON.stringify(objMember),
-            headers:{
-                'Content-type':'application/json',
-                'Accept':'application/json'
+        fetch("http://localhost:8080/gymMembers", {
+            method: 'POST',
+            body: JSON.stringify(objMember),
+            headers: {
+                'Content-type': 'application/json',
+                'Accept': 'application/json'
             }
-        }) 
-        .then(objs => objs.json())
-        .then(objs_converted => {
-            setMembers([...members, objs_converted]);
-            alert("Successful registration");
-            cleanForms();
         })
+            .then(objs => objs.json())
+            .then(objs_converted => {
+                setMembers([...members, objs_converted]);
+                alert("Successful registration");
+                cleanForms();
+            })
     }
 
     // DeleteMember
     const deleteMember = () => {
-        fetch("http://localhost:8080/gymMembers/delete" + objMember.id,{
-            method:'DELETE',
-            headers:{
-                'Content-type':'application/json',
-                'Accept':'application/json',
+        fetch("http://localhost:8080/gymMembers/delete/" + objMember.id, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json',
+                'Accept': 'application/json',
                 'Access-Control-Allow-Origin': '*'
             }
-        }) 
-        .then(objs => objs.json())
-        .then(objs_converted => {
-            
-            //mensage
-            alert("Successful Deleted");
-
-            // Copy products array
-            let arrayTemp = [...members];
-
-            // Index
-            let index = arrayTemp.findIndex((p) => {
-                return p.id === objMember.id;
-            });
-
-            // Remove product of arrayTemp
-            arrayTemp.splice(index, 1);
-
-            // Refresh array Members
-            setMembers(arrayTemp);
-
-            cleanForms();
-
         })
+        //mensage
+        alert("Successful Deleted");
+
+        //Reload page
+        window.location.reload();
+        
+        cleanForms();
     }
 
     // UpdateMember
     const UpdateMember = () => {
-        fetch("http://localhost:8080/gymMembers/patch/" + objMember.id,{
-            method:'PATCH',
-            body:JSON.stringify(objMember),
-            headers:{
-                'Content-type':'application/json',
-                'Accept':'application/json'
+        fetch("http://localhost:8080/gymMembers/patch/" + objMember.id, {
+            method: 'PATCH',
+            body: JSON.stringify(objMember),
+            headers: {
+                'Content-type': 'application/json',
+                'Accept': 'application/json'
             }
-        }) 
-        .then(objs => objs.json())
-        .then(objs_converted => {
-
-            alert("Successful updated");
-            
-            // Copy products array
-            let arrayTemp = [...members];
-
-            // Index
-            let index = arrayTemp.findIndex((p) => {
-                return p.id === objMember.id;
-            });
-
-            // Change product of arrayTemp
-            arrayTemp[index] = objMember;
-
-            // Refresh array Members
-            setMembers(arrayTemp);
-
-
-            cleanForms();
         })
+            .then(objs => objs.json())
+            .then(objs_converted => {
+
+                alert("Successful updated");
+
+                // Copy products array
+                let arrayTemp = [...members];
+
+                // Index
+                let index = arrayTemp.findIndex((p) => {
+                    return p.id === objMember.id;
+                });
+
+                // Change product of arrayTemp
+                arrayTemp[index] = objMember;
+
+                // Refresh array Members
+                setMembers(arrayTemp);
+
+
+                cleanForms();
+            })
     }
 
 
@@ -144,12 +128,12 @@ function Member(){
 
 
     //Retorno
-    return(
+    return (
         <div>
-        <ListBar />
-        <Forms  button={btnPost} keyboard={typing} post={post} obj = {objMember} input={inputCPF} cancel={cleanForms} remove={deleteMember} update={UpdateMember} />
-        <Table array={members} select={select}/>
-        <RefreshButton />
+            <ListBar />
+            <Forms button={btnPost} keyboard={typing} post={post} obj={objMember} input={inputCPF} cancel={cleanForms} remove={deleteMember} update={UpdateMember} />
+            <Table array={members} select={select} />
+            <RefreshButton />
         </div>
     )
 }
