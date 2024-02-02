@@ -73,6 +73,8 @@ function Workout() {
             .then(objs_converted => {
                 setworkouts([...workouts, objs_converted]);
                 alert("Successful registration");
+                //Reload page
+                window.location.reload();
                 cleanForms();
             })
     }

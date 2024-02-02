@@ -8,7 +8,7 @@ function WorkoutTable({ exercises, obj, array, select }) {
                 {
                     array.map((obj, index) => (
                         <ul id="ulWorkout" key={index}>
-                            <button id="buttonWorkoutList" onClick={() => { select(index) }}> Trainer: {obj.trainer.name} | Workout ID: {obj.id} | Member: {obj.gymMembership.name}</button>
+                            <button id="buttonWorkoutList" onClick={() => { select(index) }}> Trainer: {obj.trainer.name} (ID:{obj.trainer.id}) | Workout ID: {obj.id} | Member: {obj.gymMembership.name} (ID:{obj.gymMembership.id})</button>
                         </ul>
                     ))
                 }
