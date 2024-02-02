@@ -6,6 +6,7 @@ import './pages/Trainer/TrainerComplete.css';
 import './pages/Trainer/Trainer.css';
 import './pages/Trainer/ListTrainerComplete.css';
 import './pages/WorkLoad/WorkLoad.css';
+import './pages/ExerciseType/ExerciseType.css';
 
 import { BrowserRouter as Router, Routes, Route, Navigate }
     from 'react-router-dom';
@@ -15,6 +16,7 @@ import Registration from './pages/Registration/Registration';
 import Trainer from './pages/Trainer/Trainer';
 import TrainerComplete from './pages/Trainer/TrainerComplete';
 import WorkLoad from './pages/WorkLoad/WorkLoad';
+import ExerciseType from './pages/ExerciseType/ExerciseType';
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
         <Route path='/trainers' element={<Trainer />} />
         <Route path='/trainersComplete' element={<TrainerComplete />} />
         <Route path='/workLoads' element={<WorkLoad />} />
+        <Route path='/exerciseTypes' element={<ExerciseType />} />
       </Routes>
     </Router>
     </div>

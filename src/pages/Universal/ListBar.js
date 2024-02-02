@@ -13,7 +13,7 @@ function ListBar(){
                 <Link to='http://localhost:3000/workLoads'><button id="workL-button">WorkLoads</button></Link>
                 <button id="workts-button">Workouts</button>
                 <button id="exerc-button">Exercises</button>
-                <button id="exerType-button">ExercisesTypes</button>
+                <Link to='http://localhost:3000/exerciseTypes'><button id="exerType-button">ExercisesTypes</button></Link>
             </ul>
         </div>
     )
