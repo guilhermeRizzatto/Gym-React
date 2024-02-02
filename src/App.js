@@ -7,6 +7,8 @@ import './pages/Trainer/Trainer.css';
 import './pages/Trainer/ListTrainerComplete.css';
 import './pages/WorkLoad/WorkLoad.css';
 import './pages/ExerciseType/ExerciseType.css';
+import './pages/Workout/Workout.css';
+import './pages/Workout/WorkoutTable.css';
 
 import { BrowserRouter as Router, Routes, Route, Navigate }
     from 'react-router-dom';
@@ -17,6 +19,7 @@ import Trainer from './pages/Trainer/Trainer';
 import TrainerComplete from './pages/Trainer/TrainerComplete';
 import WorkLoad from './pages/WorkLoad/WorkLoad';
 import ExerciseType from './pages/ExerciseType/ExerciseType';
+import Workout from './pages/Workout/Workout';
 
 function App() {
 
@@ -31,6 +34,7 @@ function App() {
         <Route path='/trainersComplete' element={<TrainerComplete />} />
         <Route path='/workLoads' element={<WorkLoad />} />
         <Route path='/exerciseTypes' element={<ExerciseType />} />
+        <Route path='/workouts' element={<Workout />} />
       </Routes>
     </Router>
     </div>

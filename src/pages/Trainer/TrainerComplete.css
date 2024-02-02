@@ -281,7 +281,7 @@
 
 }
 
-.listWorkouts {
+.listWorkoutsTrainerDiv {
     display: flex;
     flex-direction: column;
     background-color: rgb(181, 212, 239);

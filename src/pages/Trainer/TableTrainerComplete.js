@@ -42,7 +42,7 @@ function FormsTrainerComplete({ obj, showListWorkout }) {
 
   const showWorkoutsList = () => {
     if (workouts.length > 0 && showListWorkout === true) {
-      return <div className="listWorkouts">{
+      return <div className="listWorkoutsTrainerDiv">{
         workouts.map((obj, index) => (
           <ul id="listWorkoutsTrainer" key={index}>
             <button id="buttonsWorkoutsTrainer" onClick={() => { select(index) }} > ID: {obj.id} ({obj.gymMembership.name})</button>
