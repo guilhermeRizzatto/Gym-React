@@ -13,6 +13,8 @@ function Registration(){
         monthlyPeriod : "",
         price : "",
         installment : "",
+        valid: "",
+        installmentPrice: "",
         gymMembership : {
             id : ""
         }

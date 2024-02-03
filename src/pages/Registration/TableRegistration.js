@@ -6,8 +6,10 @@ function Table({array, select}){
                     <th>Id</th>
                     <th>Registration Date</th>
                     <th>Monthly Period</th>
-                    <th>Price (R$)</th>
+                    <th>Total Price (R$)</th>
                     <th>Installment</th>
+                    <th>Valid</th>
+                    <th>Installment Price (R$)</th>
                     <th>Gym Membership (ID)</th>
                     <th>Select</th>
                 </tr>
@@ -21,6 +23,8 @@ function Table({array, select}){
                         <td>{obj.monthlyPeriod}</td>
                         <td>{obj.price}</td>
                         <td>{obj.installment}</td>
+                        <td>{obj.valid}</td>
+                        <td>{obj.installmentPrice}</td>
                         <td>{obj.gymMembership?.id}</td>
                         <td><button onClick={() => {select(index)}} className="btn btn-primary rounded-0">Select</button></td>
                     </tr>
