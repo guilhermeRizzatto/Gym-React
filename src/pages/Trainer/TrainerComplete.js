@@ -81,7 +81,7 @@ function TrainerComplete() {
   return (
     <div>
       <ListBar />
-      <Link to="http://localhost:3000/trainers">
+      <Link to="/trainers">
         <button id="TrainerCompleteButton">Trainers</button>
       </Link>
       <ListTrainerComplete
