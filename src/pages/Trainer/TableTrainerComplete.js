@@ -123,8 +123,7 @@ function FormsTrainerComplete({ obj, showListWorkout }) {
         <div className="memberDiv">
           <p id="TrainerWorkoutMember">Membership:</p>
           <p id="TrainerWorkoutMemberId"> ID: {objWorkout.gymMembership.id}</p>
-          <p id="TrainerWorkoutMemberName">
-            Name: {objWorkout.gymMembership.name}
+          <p id="TrainerWorkoutMemberName">Name: {objWorkout.gymMembership.name}
           </p>
           <p id="TrainerWorkoutMemberPhone">Phone: {objWorkout.gymMembership.phone}</p>
           <p id="TrainerWorkoutMemberAge">Age: {objWorkout.gymMembership.age}</p>

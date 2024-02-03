@@ -2,6 +2,7 @@ import ListBar from "../Universal/ListBar";
 import { useEffect, useState } from 'react';
 import WorkoutForms from "./WorkoutForms";
 import WorkoutTable from "./WorkoutTable";
+import RefreshButton from "../Universal/RefreshButton";
 
 function Workout() {
 
@@ -155,6 +156,7 @@ function Workout() {
             <ListBar />
             <WorkoutForms inputIds={inputIds} typingTrainerId={typingTrainerId} typingMemberId={typingMemberId} remove={deleteworkout} button={btnPost} keyboard={typing} post={post} obj={objworkout} cancel={cleanForms} update={Updateworkout} />
             <WorkoutTable exercises={objworkout.exercises} obj={objworkout} array={workouts} select={select}/>
+            <RefreshButton />
         </div>
     )
 }
