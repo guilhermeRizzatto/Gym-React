@@ -23,7 +23,7 @@ function Table({array, select}){
                         <td>{obj.monthlyPeriod}</td>
                         <td>{obj.price}</td>
                         <td>{obj.installment}</td>
-                        <td>{obj.valid}</td>
+                        <td>{obj.valid ? "True" : "False"}</td>
                         <td>{obj.installmentPrice}</td>
                         <td>{obj.gymMembership?.id}</td>
                         <td><button onClick={() => {select(index)}} className="btn btn-primary rounded-0">Select</button></td>
