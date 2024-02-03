@@ -127,7 +127,7 @@ function Trainer() {
     return (
         <div>
             <ListBar />
-            <Link to='http://localhost:3000/trainersComplete'><button id="TrainerCompleteButton">Trainers Complete</button></Link>
+            <Link to='/trainersComplete'><button id="TrainerCompleteButton">Trainers Complete</button></Link>
             <Forms button={btnPost} keyboard={typing} post={post} obj={objTrainer} cancel={cleanForms} remove={deleteTrainer} update={updateTrainer} />
             <Table array={trainers} select={select} />
             <RefreshButton />
