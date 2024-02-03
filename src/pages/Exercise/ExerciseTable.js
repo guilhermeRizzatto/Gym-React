@@ -1,11 +1,15 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { MyContext } from '../../useContext';
 
 
 
 function Table({ select, obj}) {
 
     
+
+    const back = useContext(MyContext);
 
     const [exercises, setExercises] = useState([]);
 
@@ -32,7 +36,7 @@ function Table({ select, obj}) {
 
     function get() {
         if (obj.id != 0) {
-            fetch("http://localhost:8080/exercises/byWorkout/" + obj.id)
+            fetch("http://" + back.address + "/exercises/byWorkout/" + obj.id)
             .then(objs => objs.json())
             .then(objs_converted => setExercises(objs_converted));
         }

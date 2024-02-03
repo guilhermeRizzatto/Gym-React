@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { MyContext } from '../../useContext';
 
 import ListBar from "../Universal/ListBar";
 import RefreshButton from "../Universal/RefreshButton";
@@ -9,7 +11,10 @@ import Forms from "../Trainer/FormsTrainer";
 
 
 
+
 function Trainer() {
+
+    const back = useContext(MyContext);
 
     // Object Trainer
     const trainer = {
@@ -26,7 +31,7 @@ function Trainer() {
 
     //UseEffect
     useEffect(() => {
-        fetch("http://localhost:8080/trainers")
+        fetch("http://" + back.address + "/trainers")
             .then(objs => objs.json())
             .then(objs_converted => setTrainers(objs_converted));
     }, []);
@@ -39,7 +44,7 @@ function Trainer() {
 
     // Post Trainer
     const post = () => {
-        fetch("http://localhost:8080/trainers", {
+        fetch("http://" + back.address + "/trainers", {
             method: 'POST',
             body: JSON.stringify(objTrainer),
             headers: {
@@ -57,7 +62,7 @@ function Trainer() {
 
     // Delete Trainer
     const deleteTrainer = () => {
-        fetch("http://localhost:8080/trainers/delete/" + objTrainer.id, {
+        fetch("http://" + back.address + "/trainers/delete/" + objTrainer.id, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json',
@@ -77,7 +82,7 @@ function Trainer() {
 
     // Update Trainer
     const updateTrainer = () => {
-        fetch("http://localhost:8080/trainers/patch/" + objTrainer.id, {
+        fetch("http://" + back.address + "/trainers/patch/" + objTrainer.id, {
             method: 'PATCH',
             body: JSON.stringify(objTrainer),
             headers: {

@@ -3,8 +3,12 @@ import { useEffect, useState } from 'react';
 import WorkoutForms from "./WorkoutForms";
 import WorkoutTable from "./WorkoutTable";
 import RefreshButton from "../Universal/RefreshButton";
+import { useContext } from 'react';
+import { MyContext } from '../../useContext';
 
 function Workout() {
+
+    const back = useContext(MyContext);
 
     // Object workout
     const workout = {
@@ -34,7 +38,7 @@ function Workout() {
     
     //UseEffect
     useEffect(() => {
-        fetch("http://localhost:8080/workouts/full")
+        fetch("http://" + back.address + "/workouts/full")
             .then(objs => objs.json())
             .then(objs_converted => setworkouts(objs_converted));
     }, []);
@@ -62,7 +66,7 @@ function Workout() {
 
     // Post workout
     const post = () => {
-        fetch("http://localhost:8080/workouts", {
+        fetch("http://" + back.address + "/workouts", {
             method: 'POST',
             body: JSON.stringify(objworkout),
             headers: {
@@ -82,7 +86,7 @@ function Workout() {
 
     // Update workout
     const Updateworkout = () => {
-        fetch("http://localhost:8080/workouts/patch/" + objworkout.id, {
+        fetch("http://" + back.address + "/workouts/patch/" + objworkout.id, {
             method: 'PATCH',
             body: JSON.stringify(objworkout),
             headers: {
@@ -116,7 +120,7 @@ function Workout() {
 
     // Deleteworkout
     const deleteworkout = () => {
-        fetch("http://localhost:8080/workouts/delete/" + objworkout.id, {
+        fetch("http://" + back.address + "/workouts/delete/" + objworkout.id, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json',

@@ -3,9 +3,13 @@ import { useEffect, useState } from 'react';
 import Table from './WorkLoadTable';
 import RefreshButton from "../Universal/RefreshButton";
 import WorkLoadForms from "./WorkLoadForms";
+import { useContext } from 'react';
+import { MyContext } from '../../useContext';
 
 function WorkLoad(){
 
+
+    const back = useContext(MyContext);
 
     // Object WorkLoad
     const workLoad = {
@@ -30,7 +34,7 @@ function WorkLoad(){
 
 //UseEffect
 useEffect(() =>{
-    fetch("http://localhost:8080/workLoads")
+    fetch("http://" + back.address + "/workLoads")
     .then(objs => objs.json())
     .then(objs_converted => setworkLoads(objs_converted));
 }, []);
@@ -58,7 +62,7 @@ const typingDays = (e) => {
 
 // Post workLoad
 const post = () => {
-    fetch("http://localhost:8080/workLoads",{
+    fetch("http://" + back.address + "/workLoads",{
         method:'POST',
         body:JSON.stringify(objworkLoad),
         headers:{
@@ -76,7 +80,7 @@ const post = () => {
 
 // Update workLoad
 const UpdateworkLoad = () => {
-    fetch("http://localhost:8080/workLoads/patch/" + objworkLoad.id,{
+    fetch("http://" + back.address + "/workLoads/patch/" + objworkLoad.id,{
         method:'PATCH',
         body:JSON.stringify(objworkLoad),
         headers:{

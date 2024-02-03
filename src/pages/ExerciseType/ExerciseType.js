@@ -3,8 +3,14 @@ import { useEffect, useState } from 'react';
 import RefreshButton from "../Universal/RefreshButton";
 import Table from './ExerciseTypeTable';
 import ExerciseTypeForms from "./ExerciseTypeForms";
+import React, { useContext } from 'react';
+import { MyContext } from '../../useContext';
+
 
 function ExerciseType(){
+
+
+    const back = useContext(MyContext);
 
     // Object exerciseType
     const exerciseType = {
@@ -20,7 +26,7 @@ function ExerciseType(){
   
 //UseEffect
 useEffect(() =>{
-    fetch("http://localhost:8080/exerciseTypes")
+    fetch("http://" + back.address + "/exerciseTypes")
     .then(objs => objs.json())
     .then(objs_converted => setexerciseTypes(objs_converted));
 }, []);
@@ -32,7 +38,7 @@ const typing = (e) => {
 
 // Post exerciseType
 const post = () => {
-    fetch("http://localhost:8080/exerciseTypes",{
+    fetch("http://" + back.address + "/exerciseTypes",{
         method:'POST',
         body:JSON.stringify(objExerciseType),
         headers:{
@@ -50,7 +56,7 @@ const post = () => {
 
 // Update exerciseType
 const UpdateexerciseType = () => {
-    fetch("http://localhost:8080/exerciseTypes/patch/" + objExerciseType.id,{
+    fetch("http://" + back.address + "/exerciseTypes/patch/" + objExerciseType.id,{
         method:'PATCH',
         body:JSON.stringify(objExerciseType),
         headers:{
@@ -84,7 +90,7 @@ const UpdateexerciseType = () => {
 
 // DeleteExerciseType
 const deleteExerciseType = () => {
-    fetch("http://localhost:8080/exerciseTypes/delete/" + objExerciseType.id, {
+    fetch("http://" + back.address + "/exerciseTypes/delete/" + objExerciseType.id, {
         method: 'DELETE',
         headers: {
             'Content-type': 'application/json',

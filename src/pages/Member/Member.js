@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MyContext } from '../../useContext';
 import { useEffect, useState } from 'react';
 import Table from './TableMember';
 import Forms from './FormsMember';
@@ -6,6 +7,9 @@ import ListBar from '../Universal/ListBar';
 import RefreshButton from "../Universal/RefreshButton";
 
 function Member() {
+
+
+    const back = useContext(MyContext);
 
     // Object Member
     const member = {
@@ -26,7 +30,7 @@ function Member() {
 
     //UseEffect
     useEffect(() => {
-        fetch("http://localhost:8080/gymMembers")
+        fetch("http://" + back.address + "/gymMembers")
             .then(objs => objs.json())
             .then(objs_converted => setMembers(objs_converted));
     }, []);
@@ -39,7 +43,7 @@ function Member() {
 
     // PostMember
     const post = () => {
-        fetch("http://localhost:8080/gymMembers", {
+        fetch("http://" + back.address + "/gymMembers", {
             method: 'POST',
             body: JSON.stringify(objMember),
             headers: {
@@ -57,7 +61,7 @@ function Member() {
 
     // DeleteMember
     const deleteMember = () => {
-        fetch("http://localhost:8080/gymMembers/delete/" + objMember.id, {
+        fetch("http://" + back.address + "/gymMembers/delete/" + objMember.id, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json',
@@ -76,7 +80,7 @@ function Member() {
 
     // UpdateMember
     const UpdateMember = () => {
-        fetch("http://localhost:8080/gymMembers/patch/" + objMember.id, {
+        fetch("http://" + back.address + "/gymMembers/patch/" + objMember.id, {
             method: 'PATCH',
             body: JSON.stringify(objMember),
             headers: {

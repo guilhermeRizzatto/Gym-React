@@ -3,8 +3,12 @@ import { useEffect, useState } from 'react';
 import Forms from './FormsRegistration';
 import Table from "./TableRegistration";
 import RefreshButton from "../Universal/RefreshButton";
+import React, { useContext } from 'react';
+import { MyContext } from '../../useContext';
 
 function Registration(){
+
+    var back = useContext(MyContext);
     
     // Object Registration
     const registration = {
@@ -29,7 +33,7 @@ function Registration(){
 
     //UseEffect
     useEffect(() =>{
-        fetch("http://localhost:8080/registrations")
+        fetch("http://"+ back.address + "/registrations")
         .then(objs => objs.json())
         .then(objs_converted => setRegistrations(objs_converted));
     }, []);
@@ -50,7 +54,7 @@ function Registration(){
 
     // Post Registration
     const post = () => {
-        fetch("http://localhost:8080/registrations",{
+        fetch("http://" + back.address + "/registrations",{
             method:'POST',
             body:JSON.stringify(objRegistration),
             headers:{
@@ -68,7 +72,7 @@ function Registration(){
 
     // Update Registration
     const UpdateRegistration = () => {
-        fetch("http://localhost:8080/registrations/patch/" + objRegistration.id,{
+        fetch("http://" + back.address + "/registrations/patch/" + objRegistration.id,{
             method:'PATCH',
             body:JSON.stringify(objRegistration),
             headers:{

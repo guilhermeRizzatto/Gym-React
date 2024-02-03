@@ -4,10 +4,14 @@ import ExerciseList from "./ExerciseList";
 import ExerciseTable from "./ExerciseTable";
 import ExerciseForms from "./ExerciseForms";
 import RefreshButton from "../Universal/RefreshButton";
+import React, { useContext } from 'react';
+import { MyContext } from '../../useContext';
 
 
 function Exercise() {
 
+
+    const back = useContext(MyContext);
 
     const workout = {
         id: "",
@@ -36,7 +40,7 @@ function Exercise() {
     }
 
     useEffect(() => {
-        fetch("http://localhost:8080/workouts")
+        fetch("http://" + back.address + "/workouts")
             .then(objs => objs.json())
             .then(objs_converted => setworkouts(objs_converted));
     }, []);
@@ -74,7 +78,7 @@ function Exercise() {
     }
     
     const post = () => {
-        fetch("http://localhost:8080/exercises", {
+        fetch("http://" + back.address + "/exercises", {
             method: 'POST',
             body: JSON.stringify(objExercise),
             headers: {
@@ -90,7 +94,7 @@ function Exercise() {
     }
     
     const UpdateExercise = () => {
-        fetch("http://localhost:8080/exercises/patch/workout/" + objworkout.id + "/exerciseType/" + objExercise.exerciseType.id,{
+        fetch("http://" + back.address + "/exercises/patch/workout/" + objworkout.id + "/exerciseType/" + objExercise.exerciseType.id,{
             method: 'PATCH',
             body: JSON.stringify(objExercise),
             headers: {
@@ -106,7 +110,7 @@ function Exercise() {
     }
     
     const deleteExercise = () => {
-        fetch("http://localhost:8080/exercises/delete/workout/" + objworkout.id + "/exerciseType/" + objExercise.exerciseType.id, {
+        fetch("http://" + back.address + "/exercises/delete/workout/" + objworkout.id + "/exerciseType/" + objExercise.exerciseType.id, {
             method: 'DELETE',
             headers: {
                 'Content-type': 'application/json',
