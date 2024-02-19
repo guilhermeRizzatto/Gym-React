@@ -3,12 +3,10 @@ import { useEffect, useState } from 'react';
 import WorkoutForms from "./WorkoutForms";
 import WorkoutTable from "./WorkoutTable";
 import RefreshButton from "../Universal/RefreshButton";
-import { useContext } from 'react';
-import { MyContext } from '../../useContext';
 
 function Workout() {
 
-    const back = useContext(MyContext);
+    const back = require("../../auxiliary/addressBackend.js");
 
     // Object workout
     const workout = {
@@ -41,7 +39,7 @@ function Workout() {
         fetch("http://" + back.address + "/workouts/full")
             .then(objs => objs.json())
             .then(objs_converted => setworkouts(objs_converted));
-    }, []);
+    }, [back]);
 
     // Get Forms data
     const typing = (e) => {

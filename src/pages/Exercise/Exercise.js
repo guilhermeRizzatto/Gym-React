@@ -4,14 +4,11 @@ import ExerciseList from "./ExerciseList";
 import ExerciseTable from "./ExerciseTable";
 import ExerciseForms from "./ExerciseForms";
 import RefreshButton from "../Universal/RefreshButton";
-import React, { useContext } from 'react';
-import { MyContext } from '../../useContext';
 
 
 function Exercise() {
 
-
-    const back = useContext(MyContext);
+    const back = require("../../auxiliary/addressBackend.js");
 
     const workout = {
         id: "",
@@ -43,7 +40,7 @@ function Exercise() {
         fetch("http://" + back.address + "/workouts")
             .then(objs => objs.json())
             .then(objs_converted => setworkouts(objs_converted));
-    }, []);
+    }, [back]);
 
 
     const [workouts, setworkouts] = useState([]);

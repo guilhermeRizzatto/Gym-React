@@ -1,8 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { MyContext } from '../../useContext';
 
 import ListBar from "../Universal/ListBar";
 import RefreshButton from "../Universal/RefreshButton";
@@ -14,7 +12,7 @@ import Forms from "../Trainer/FormsTrainer";
 
 function Trainer() {
 
-    const back = useContext(MyContext);
+    const back = require("../../auxiliary/addressBackend.js");
 
     // Object Trainer
     const trainer = {
@@ -34,7 +32,7 @@ function Trainer() {
         fetch("http://" + back.address + "/trainers")
             .then(objs => objs.json())
             .then(objs_converted => setTrainers(objs_converted));
-    }, []);
+    }, [back]);
 
     // Get Forms data
     const typing = (e) => {

@@ -3,13 +3,12 @@ import { useEffect, useState } from 'react';
 import Table from './WorkLoadTable';
 import RefreshButton from "../Universal/RefreshButton";
 import WorkLoadForms from "./WorkLoadForms";
-import { useContext } from 'react';
-import { MyContext } from '../../useContext';
+
 
 function WorkLoad(){
 
 
-    const back = useContext(MyContext);
+    const back = require("../../auxiliary/addressBackend.js");
 
     // Object WorkLoad
     const workLoad = {
@@ -37,7 +36,7 @@ useEffect(() =>{
     fetch("http://" + back.address + "/workLoads")
     .then(objs => objs.json())
     .then(objs_converted => setworkLoads(objs_converted));
-}, []);
+}, [back]);
 
 // Get Forms data
 const typing = (e) => {

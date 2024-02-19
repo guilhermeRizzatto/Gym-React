@@ -3,14 +3,13 @@ import { useEffect, useState } from 'react';
 import RefreshButton from "../Universal/RefreshButton";
 import Table from './ExerciseTypeTable';
 import ExerciseTypeForms from "./ExerciseTypeForms";
-import React, { useContext } from 'react';
-import { MyContext } from '../../useContext';
+
 
 
 function ExerciseType(){
 
 
-    const back = useContext(MyContext);
+    const back = require("../../auxiliary/addressBackend.js");
 
     // Object exerciseType
     const exerciseType = {
@@ -29,7 +28,7 @@ useEffect(() =>{
     fetch("http://" + back.address + "/exerciseTypes")
     .then(objs => objs.json())
     .then(objs_converted => setexerciseTypes(objs_converted));
-}, []);
+}, [back]);
 
 // Get Forms data
 const typing = (e) => {

@@ -3,12 +3,10 @@ import { useEffect, useState } from 'react';
 import Forms from './FormsRegistration';
 import Table from "./TableRegistration";
 import RefreshButton from "../Universal/RefreshButton";
-import React, { useContext } from 'react';
-import { MyContext } from '../../useContext';
 
 function Registration(){
 
-    var back = useContext(MyContext);
+    const back = require("../../auxiliary/addressBackend.js");
     
     // Object Registration
     const registration = {
@@ -36,7 +34,7 @@ function Registration(){
         fetch("http://"+ back.address + "/registrations")
         .then(objs => objs.json())
         .then(objs_converted => setRegistrations(objs_converted));
-    }, []);
+    }, [back]);
 
     // Get Forms data
     const typing = (e) => {

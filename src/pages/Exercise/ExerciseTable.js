@@ -1,7 +1,5 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { useContext } from 'react';
-import { MyContext } from '../../useContext';
 
 
 
@@ -9,7 +7,7 @@ function Table({ select, obj}) {
 
     
 
-    const back = useContext(MyContext);
+    const back = require("../../auxiliary/addressBackend.js");
 
     const [exercises, setExercises] = useState([]);
 

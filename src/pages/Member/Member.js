@@ -1,5 +1,3 @@
-import React, { useContext } from 'react';
-import { MyContext } from '../../useContext';
 import { useEffect, useState } from 'react';
 import Table from './TableMember';
 import Forms from './FormsMember';
@@ -9,7 +7,7 @@ import RefreshButton from "../Universal/RefreshButton";
 function Member() {
 
 
-    const back = useContext(MyContext);
+    const back = require("../../auxiliary/addressBackend.js");
 
     // Object Member
     const member = {
@@ -33,7 +31,7 @@ function Member() {
         fetch("http://" + back.address + "/gymMembers")
             .then(objs => objs.json())
             .then(objs_converted => setMembers(objs_converted));
-    }, []);
+    }, [back]);
 
     // Get Forms data
     const typing = (e) => {
