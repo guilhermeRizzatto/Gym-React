@@ -37,7 +37,7 @@ function Exercise() {
     }
 
     useEffect(() => {
-        fetch("http://" + back.address + "/workouts", {
+        fetch("https://" + back.address + "/workouts", {
             headers: {
                 'bypass-tunnel-reminder': '9999',
             }
@@ -79,7 +79,7 @@ function Exercise() {
     }
     
     const post = () => {
-        fetch("http://" + back.address + "/exercises", {
+        fetch("https://" + back.address + "/exercises", {
             method: 'POST',
             body: JSON.stringify(objExercise),
             headers: {
@@ -96,7 +96,7 @@ function Exercise() {
     }
     
     const UpdateExercise = () => {
-        fetch("http://" + back.address + "/exercises/patch/workout/" + objworkout.id + "/exerciseType/" + objExercise.exerciseType.id,{
+        fetch("https://" + back.address + "/exercises/patch/workout/" + objworkout.id + "/exerciseType/" + objExercise.exerciseType.id,{
             method: 'PATCH',
             body: JSON.stringify(objExercise),
             headers: {
@@ -113,7 +113,7 @@ function Exercise() {
     }
     
     const deleteExercise = () => {
-        fetch("http://" + back.address + "/exercises/delete/workout/" + objworkout.id + "/exerciseType/" + objExercise.exerciseType.id, {
+        fetch("https://" + back.address + "/exercises/delete/workout/" + objworkout.id + "/exerciseType/" + objExercise.exerciseType.id, {
             method: 'DELETE',
             headers: {
                 'bypass-tunnel-reminder': '9999',

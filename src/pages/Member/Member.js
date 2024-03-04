@@ -45,7 +45,7 @@ function Member() {
 
     // PostMember
     const post = () => {
-        fetch("http://" + back.address + "/gymMembers", {
+        fetch("https://" + back.address + "/gymMembers", {
             method: 'POST',
             body: JSON.stringify(objMember),
             headers: {
@@ -64,7 +64,7 @@ function Member() {
 
     // DeleteMember
     const deleteMember = () => {
-        fetch("http://" + back.address + "/gymMembers/delete/" + objMember.id, {
+        fetch("https://" + back.address + "/gymMembers/delete/" + objMember.id, {
             method: 'DELETE',
             headers: {
                 'bypass-tunnel-reminder': '9999',
@@ -84,7 +84,7 @@ function Member() {
 
     // UpdateMember
     const UpdateMember = () => {
-        fetch("http://" + back.address + "/gymMembers/patch/" + objMember.id, {
+        fetch("https://" + back.address + "/gymMembers/patch/" + objMember.id, {
             method: 'PATCH',
             body: JSON.stringify(objMember),
             headers: {

@@ -29,7 +29,7 @@ function Trainer() {
 
     //UseEffect
     useEffect(() => {
-        fetch("http://" + back.address + "/trainers", {
+        fetch("https://" + back.address + "/trainers", {
             headers: { 
                 'bypass-tunnel-reminder': '9999',
             }
@@ -46,7 +46,7 @@ function Trainer() {
 
     // Post Trainer
     const post = () => {
-        fetch("http://" + back.address + "/trainers", {
+        fetch("https://" + back.address + "/trainers", {
             method: 'POST',
             body: JSON.stringify(objTrainer),
             headers: {
@@ -65,7 +65,7 @@ function Trainer() {
 
     // Delete Trainer
     const deleteTrainer = () => {
-        fetch("http://" + back.address + "/trainers/delete/" + objTrainer.id, {
+        fetch("https://" + back.address + "/trainers/delete/" + objTrainer.id, {
             method: 'DELETE',
             headers: {
                 'bypass-tunnel-reminder': '9999',
@@ -86,7 +86,7 @@ function Trainer() {
 
     // Update Trainer
     const updateTrainer = () => {
-        fetch("http://" + back.address + "/trainers/patch/" + objTrainer.id, {
+        fetch("https://" + back.address + "/trainers/patch/" + objTrainer.id, {
             method: 'PATCH',
             body: JSON.stringify(objTrainer),
             headers: {

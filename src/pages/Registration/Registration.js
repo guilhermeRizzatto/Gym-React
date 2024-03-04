@@ -31,7 +31,7 @@ function Registration(){
 
     //UseEffect
     useEffect(() =>{
-        fetch("http://"+ back.address + "/registrations", {
+        fetch("https://"+ back.address + "/registrations", {
             headers: {
                 'bypass-tunnel-reminder': '9999',
             }
@@ -56,7 +56,7 @@ function Registration(){
 
     // Post Registration
     const post = () => {
-        fetch("http://" + back.address + "/registrations",{
+        fetch("https://" + back.address + "/registrations",{
             method:'POST',
             body:JSON.stringify(objRegistration),
             headers:{
@@ -75,7 +75,7 @@ function Registration(){
 
     // Update Registration
     const UpdateRegistration = () => {
-        fetch("http://" + back.address + "/registrations/patch/" + objRegistration.id,{
+        fetch("https://" + back.address + "/registrations/patch/" + objRegistration.id,{
             method:'PATCH',
             body:JSON.stringify(objRegistration),
             headers:{

@@ -33,7 +33,7 @@ function WorkLoad(){
 
 //UseEffect
 useEffect(() =>{
-    fetch("http://" + back.address + "/workLoads",{
+    fetch("https://" + back.address + "/workLoads",{
         headers: {
             'bypass-tunnel-reminder': '9999',
         }
@@ -65,7 +65,7 @@ const typingDays = (e) => {
 
 // Post workLoad
 const post = () => {
-    fetch("http://" + back.address + "/workLoads",{
+    fetch("https://" + back.address + "/workLoads",{
         method:'POST',
         body:JSON.stringify(objworkLoad),
         headers:{
@@ -84,7 +84,7 @@ const post = () => {
 
 // Update workLoad
 const UpdateworkLoad = () => {
-    fetch("http://" + back.address + "/workLoads/patch/" + objworkLoad.id,{
+    fetch("https://" + back.address + "/workLoads/patch/" + objworkLoad.id,{
         method:'PATCH',
         body:JSON.stringify(objworkLoad),
         headers:{

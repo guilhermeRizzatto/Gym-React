@@ -34,7 +34,7 @@ function Table({ select, obj}) {
 
     function get() {
         if (obj.id != 0) {
-            fetch("http://" + back.address + "/exercises/byWorkout/" + obj.id, {
+            fetch("https://" + back.address + "/exercises/byWorkout/" + obj.id, {
                 headers: {
                     'bypass-tunnel-reminder': '9999',
                 }

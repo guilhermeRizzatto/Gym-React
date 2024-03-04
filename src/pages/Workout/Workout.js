@@ -36,7 +36,7 @@ function Workout() {
     
     //UseEffect
     useEffect(() => {
-        fetch("http://" + back.address + "/workouts/full",{
+        fetch("https://" + back.address + "/workouts/full",{
             headers: {
                 'bypass-tunnel-reminder': '9999',
             }
@@ -68,7 +68,7 @@ function Workout() {
 
     // Post workout
     const post = () => {
-        fetch("http://" + back.address + "/workouts", {
+        fetch("https://" + back.address + "/workouts", {
             method: 'POST',
             body: JSON.stringify(objworkout),
             headers: {
@@ -89,7 +89,7 @@ function Workout() {
 
     // Update workout
     const Updateworkout = () => {
-        fetch("http://" + back.address + "/workouts/patch/" + objworkout.id, {
+        fetch("https://" + back.address + "/workouts/patch/" + objworkout.id, {
             method: 'PATCH',
             body: JSON.stringify(objworkout),
             headers: {
@@ -124,7 +124,7 @@ function Workout() {
 
     // Deleteworkout
     const deleteworkout = () => {
-        fetch("http://" + back.address + "/workouts/delete/" + objworkout.id, {
+        fetch("https://" + back.address + "/workouts/delete/" + objworkout.id, {
             method: 'DELETE',
             headers: {
                 'bypass-tunnel-reminder': '9999',

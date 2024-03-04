@@ -53,7 +53,7 @@ function TrainerComplete() {
 
   //UseEffect
   useEffect(() => {
-    fetch("http://" + back.address + "/trainers/full", {
+    fetch("https://" + back.address + "/trainers/full", {
       headers: {
         'bypass-tunnel-reminder': '9999',
       }

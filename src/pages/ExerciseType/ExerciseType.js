@@ -25,7 +25,7 @@ function ExerciseType(){
   
 //UseEffect
 useEffect(() =>{
-    fetch("http://" + back.address + "/exerciseTypes", {
+    fetch("https://" + back.address + "/exerciseTypes", {
         headers: {
             'bypass-tunnel-reminder': '9999',
         }
@@ -41,7 +41,7 @@ const typing = (e) => {
 
 // Post exerciseType
 const post = () => {
-    fetch("http://" + back.address + "/exerciseTypes",{
+    fetch("https://" + back.address + "/exerciseTypes",{
         method:'POST',
         body:JSON.stringify(objExerciseType),
         headers:{
@@ -60,7 +60,7 @@ const post = () => {
 
 // Update exerciseType
 const UpdateexerciseType = () => {
-    fetch("http://" + back.address + "/exerciseTypes/patch/" + objExerciseType.id,{
+    fetch("https://" + back.address + "/exerciseTypes/patch/" + objExerciseType.id,{
         method:'PATCH',
         body:JSON.stringify(objExerciseType),
         headers:{
@@ -95,7 +95,7 @@ const UpdateexerciseType = () => {
 
 // DeleteExerciseType
 const deleteExerciseType = () => {
-    fetch("http://" + back.address + "/exerciseTypes/delete/" + objExerciseType.id, {
+    fetch("https://" + back.address + "/exerciseTypes/delete/" + objExerciseType.id, {
         method: 'DELETE',
         headers: {
             'bypass-tunnel-reminder': '9999',
