@@ -1,8 +1,3 @@
-import { useEffect, useState } from 'react';
-
-
-
-
 
 //List of workouts to select exercises
 function ExerciseList({select, array}){

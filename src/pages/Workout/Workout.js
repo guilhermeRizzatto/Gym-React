@@ -36,7 +36,11 @@ function Workout() {
     
     //UseEffect
     useEffect(() => {
-        fetch("http://" + back.address + "/workouts/full")
+        fetch("http://" + back.address + "/workouts/full",{
+            headers: {
+                'bypass-tunnel-reminder': '9999',
+            }
+        })
             .then(objs => objs.json())
             .then(objs_converted => setworkouts(objs_converted));
     }, [back]);
@@ -68,6 +72,7 @@ function Workout() {
             method: 'POST',
             body: JSON.stringify(objworkout),
             headers: {
+                'bypass-tunnel-reminder': '9999',
                 'Content-type': 'application/json',
                 'Accept': 'application/json'
             }
@@ -88,6 +93,7 @@ function Workout() {
             method: 'PATCH',
             body: JSON.stringify(objworkout),
             headers: {
+                'bypass-tunnel-reminder': '9999',
                 'Content-type': 'application/json',
                 'Accept': 'application/json'
             }
@@ -121,6 +127,7 @@ function Workout() {
         fetch("http://" + back.address + "/workouts/delete/" + objworkout.id, {
             method: 'DELETE',
             headers: {
+                'bypass-tunnel-reminder': '9999',
                 'Content-type': 'application/json',
                 'Accept': 'application/json',
                 'Access-Control-Allow-Origin': '*'

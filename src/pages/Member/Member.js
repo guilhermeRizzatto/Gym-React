@@ -28,7 +28,11 @@ function Member() {
 
     //UseEffect
     useEffect(() => {
-        fetch("http://" + back.address + "/gymMembers")
+        fetch("https://" + back.address + "/gymMembers", {
+            headers: {
+                'bypass-tunnel-reminder': '9999',
+              }
+        })
             .then(objs => objs.json())
             .then(objs_converted => setMembers(objs_converted));
     }, [back]);
@@ -45,8 +49,9 @@ function Member() {
             method: 'POST',
             body: JSON.stringify(objMember),
             headers: {
+                'bypass-tunnel-reminder': '9999',
                 'Content-type': 'application/json',
-                'Accept': 'application/json'
+                'Accept': 'application/json',
             }
         })
             .then(objs => objs.json())
@@ -62,6 +67,7 @@ function Member() {
         fetch("http://" + back.address + "/gymMembers/delete/" + objMember.id, {
             method: 'DELETE',
             headers: {
+                'bypass-tunnel-reminder': '9999',
                 'Content-type': 'application/json',
                 'Accept': 'application/json',
                 'Access-Control-Allow-Origin': '*'
@@ -82,8 +88,10 @@ function Member() {
             method: 'PATCH',
             body: JSON.stringify(objMember),
             headers: {
+                'bypass-tunnel-reminder': '9999',
                 'Content-type': 'application/json',
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'Access-Control-Allow-Origin': '*',
             }
         })
             .then(objs => objs.json())

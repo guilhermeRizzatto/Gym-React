@@ -34,7 +34,11 @@ function Table({ select, obj}) {
 
     function get() {
         if (obj.id != 0) {
-            fetch("http://" + back.address + "/exercises/byWorkout/" + obj.id)
+            fetch("http://" + back.address + "/exercises/byWorkout/" + obj.id, {
+                headers: {
+                    'bypass-tunnel-reminder': '9999',
+                }
+            })
             .then(objs => objs.json())
             .then(objs_converted => setExercises(objs_converted));
         }

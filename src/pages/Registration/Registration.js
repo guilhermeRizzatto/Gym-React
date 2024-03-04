@@ -31,7 +31,11 @@ function Registration(){
 
     //UseEffect
     useEffect(() =>{
-        fetch("http://"+ back.address + "/registrations")
+        fetch("http://"+ back.address + "/registrations", {
+            headers: {
+                'bypass-tunnel-reminder': '9999',
+            }
+        })
         .then(objs => objs.json())
         .then(objs_converted => setRegistrations(objs_converted));
     }, [back]);
@@ -56,6 +60,7 @@ function Registration(){
             method:'POST',
             body:JSON.stringify(objRegistration),
             headers:{
+                'bypass-tunnel-reminder': '9999',
                 'Content-type':'application/json',
                 'Accept':'application/json'
             }
@@ -74,6 +79,7 @@ function Registration(){
             method:'PATCH',
             body:JSON.stringify(objRegistration),
             headers:{
+                'bypass-tunnel-reminder': '9999',
                 'Content-type':'application/json',
                 'Accept':'application/json'
             }

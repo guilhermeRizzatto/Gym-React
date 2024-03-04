@@ -1,3 +1,3 @@
-var address = "localhost:8080";
+var address = "hungry-eggs-bathe.loca.lt";
 
 exports.address = address;

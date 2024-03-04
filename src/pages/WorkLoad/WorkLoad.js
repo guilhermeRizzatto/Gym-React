@@ -33,7 +33,11 @@ function WorkLoad(){
 
 //UseEffect
 useEffect(() =>{
-    fetch("http://" + back.address + "/workLoads")
+    fetch("http://" + back.address + "/workLoads",{
+        headers: {
+            'bypass-tunnel-reminder': '9999',
+        }
+    })
     .then(objs => objs.json())
     .then(objs_converted => setworkLoads(objs_converted));
 }, [back]);
@@ -65,6 +69,7 @@ const post = () => {
         method:'POST',
         body:JSON.stringify(objworkLoad),
         headers:{
+            'bypass-tunnel-reminder': '9999',
             'Content-type':'application/json',
             'Accept':'application/json'
         }
@@ -83,6 +88,7 @@ const UpdateworkLoad = () => {
         method:'PATCH',
         body:JSON.stringify(objworkLoad),
         headers:{
+            'bypass-tunnel-reminder': '9999',
             'Content-type':'application/json',
             'Accept':'application/json'
         }
