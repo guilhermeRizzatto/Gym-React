@@ -1,6 +1,8 @@
 # Gym-React
-Front End version to SpringBoot-Jpa-Gym project
-<a href=https://academyservice.com.br> Site link to take a look </a>
+Front End version to SpringBoot-Jpa-Gym project <br>
+***THIS PROJECT IS HOSTED BY VERCEL*** <br>
+
+If you want to see the site: <a href=https://academyservice.com.br> **academyservice.com.br** </a>
 
 If you want to see the backend project: <a href=github.com/guilhermeRizzatto/SpringBoot-Jpa-Gym> SpringBoot-Jpa-Gym </a>
 
