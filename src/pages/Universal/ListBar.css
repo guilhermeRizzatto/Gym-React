@@ -1,4 +1,6 @@
 .listBar{
+    display: flex;
+    flex-direction: column;
     width: auto;
     min-width: 450px;
     align-content: center;

@@ -5,7 +5,7 @@ function ListBar(){
     return(
 
         <div className="listBar">
-            <span id="SpanMenu">Menu</span>
+            <p id="SpanMenu">Menu</p>
             <ul className="Buttons">
                 <Link to='/member'><button id="gym-button" type="button">Gym Memberships</button></Link>
                 <Link to='/registrations'><button id="regi-button">Registrations</button></Link>
