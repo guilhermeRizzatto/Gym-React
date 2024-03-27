@@ -42,7 +42,7 @@
     }
 
     .WorkoutmemberDiv {
-        height: 220px;
+        height: 240px;
         background-color: rgb(241, 241, 241);
         text-align: center;
 
@@ -90,7 +90,7 @@
 
         .exerciseTypeTable {
             width: 250px;
-            background-color: rgb(207, 183, 255);
+            background-color: rgba(157, 124, 223, 0.365);
             margin-left: 10px;
             margin-top: 10px;
             margin-right: 10px;
@@ -98,7 +98,7 @@
             border-left: 0px;
             border-top: 0px;
             border-right: 0px;
-            border-color: rgb(165, 121, 252);;
+            border-color: rgba(117, 88, 175, 0.46);;
 
     
             #exerciseTypeText {
@@ -111,20 +111,20 @@
                 margin-right: 10px;
                 margin-top: 10px;
                 margin-bottom: 10px;
-                background-color: rgb(192, 162, 251);
+                background-color: rgba(193, 170, 239, 0.704);
                 
             }
         }
     
         .exerciseTable {
             width: 250px;
-            background-color: rgb(207, 183, 255);
+            background-color: rgba(157, 124, 223, 0.365);
             margin-left: 10px;
             margin-bottom: 10px;
             margin-right: 10px;
     
             #exerciseText {
-                background-color: rgb(192, 162, 251);
+                background-color: rgba(193, 170, 239, 0.704);
                 padding-left: 5px;
                 padding-right: 5px;
                 padding-bottom: 0px;
